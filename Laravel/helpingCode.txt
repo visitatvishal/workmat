@@ -13,3 +13,35 @@ After adding that to your composer.json file, run the following command:
 composer dump-autoload
 
 ----------------------------------------------------------
+
+if you are in Controller then you can use 'dispatch' like below:
+
+public function language( $lang,
+		ChangeLocale $changeLocale)
+	{		
+		$lang = in_array($lang, config('app.languages')) ? $lang : config('app.fallback_locale');
+		$changeLocale->lang = $lang;
+		$this->dispatch($changeLocale);
+
+		return redirect()->back();
+	}
+because in basic Controller we have below line:
+use Illuminate\Foundation\Bus\DispatchesJobs;
+
+if you want to use 'dispatch' in middleware then:
+use Illuminate\Bus\Dispatcher as BusDispatcher;
+
+public function __construct(BusDispatcher $bus,SetLocale $setLocale){
+		$this->bus = $bus;
+		$this->setLocale = $setLocale;
+	}
+	
+	public function handle($request, Closure $next)
+	{
+		$this->bus->dispatch($this->setLocale);
+
+		........
+	}
+'dispatch' executes 'handle()' function.
+
+-------------------------------------------------------------------
