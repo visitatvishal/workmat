@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+
+header.header {
+    float: left;
+    width: 100%;
+    min-height: 90px;
+}
+
+.head_box {
+    background: #333;
+    float: left;
+    width: 100%;
+    padding: 45px 0px;
+}
+
+aside.left_aside {
+    float: left;
+    width: 18%;
+    min-height: 450px;
+    margin-right: 2%;
+    margin-top: 30px;
+}
+
+aside.right_aside {
+    float: left;
+    width: 18%;
+    min-height: 450px;
+    margin-left: 2%;
+    position: relative;
+    margin-top: 30px;
+}
+
+.content {
+    float: left;
+    width: 60%;
+    min-height: 450px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.aside_bx {
+    float: left;
+    background: #333;
+    display: table-row;
+    min-height: 450px;
+    width: 100%;
+}
+
+.middle_container {
+    float: left;
+    width: 100%;
+    background: #333;
+    min-height: 450px;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    min-height: 100px;
+}
+
+.footer {
+    float: left;
+    background: #333;
+    min-height: 100px;
+    width: 100%;
+}
