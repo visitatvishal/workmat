@@ -45,3 +45,8 @@ public function __construct(BusDispatcher $bus,SetLocale $setLocale){
 'dispatch' executes 'handle()' function.
 
 -------------------------------------------------------------------
+DB:enableQueryLog();
+DB::table('.....');
+dd(DB::getQueryLog()); // it will return the SQL and bindings of the last query.
+
+------------------------------------------------------------
